@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonjour</title>
+    <script>
+        // Déclaration du tableau de mots
+        var mots = ["chat", "chien", "éléphant", "souris", "hippopotame"];
+        
+        // Variable pour stocker le mot le plus long
+        var motLePlusLong = "";
+        
+        // Parcours du tableau pour trouver le mot le plus long
+        for (var i = 0; i < mots.length; i++) {
+            // Vérifie si le mot actuel est plus long que le motLePlusLong
+            if (mots[i].length > motLePlusLong.length) {
+                motLePlusLong = mots[i];
+            }
+        }
+        
+        // Affichage du mot le plus long dans la console
+        console.log("Le mot le plus long est : " + motLePlusLong);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
