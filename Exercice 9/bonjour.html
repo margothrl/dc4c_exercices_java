@@ -7,19 +7,25 @@
     <title>Bonjour</title>
     <script>
         // Génération d'un nombre aléatoire entre 1 et 100
-        var nombreAleatoire = Math.floor(Math.random() * 100) + 1;
+        var justePrix = Math.floor(Math.random() * 100) + 1;
 
-        // Demande à l'utilisateur de deviner le nombre
-        var proposition = parseInt(prompt("Devinez le nombre (entre 1 et 100) :"));
+        // Fonction pour vérifier la proposition de l'utilisateur
+        function verifierProposition() {
+            var proposition = parseInt(prompt("Devinez le nombre (entre 1 et 100) :"));
 
-        // Vérification de la proposition de l'utilisateur
-        if (proposition === nombreAleatoire) {
-            console.log("Bravo !");
-        } else if (proposition < nombreAleatoire) {
-            console.log("Trop petit !");
-        } else {
-            console.log("Trop grand !");
+            if (proposition === justePrix) {
+                console.log("Bravo ! Vous avez deviné le juste prix.");
+            } else if (proposition < justePrix) {
+                console.log("Trop petit !");
+                verifierProposition(); // Demande une nouvelle proposition
+            } else {
+                console.log("Trop grand !");
+                verifierProposition(); // Demande une nouvelle proposition
+            }
         }
+
+        // Appel initial à la fonction de vérification de la proposition
+        verifierProposition();
     </script>
 </head>
 <body>
