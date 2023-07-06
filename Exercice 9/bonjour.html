@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonjour</title>
+    <script>
+        // Génération d'un nombre aléatoire entre 1 et 100
+        var nombreAleatoire = Math.floor(Math.random() * 100) + 1;
+
+        // Demande à l'utilisateur de deviner le nombre
+        var proposition = parseInt(prompt("Devinez le nombre (entre 1 et 100) :"));
+
+        // Vérification de la proposition de l'utilisateur
+        if (proposition === nombreAleatoire) {
+            console.log("Bravo !");
+        } else if (proposition < nombreAleatoire) {
+            console.log("Trop petit !");
+        } else {
+            console.log("Trop grand !");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
