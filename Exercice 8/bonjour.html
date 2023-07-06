@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonjour</title>
+    <script>
+        // Demande à l'utilisateur d'entrer un mot
+        var mot = prompt("Entrez un mot :");
+        
+        // Fonction pour inverser une chaîne de caractères
+        function inverserChaine(chaine) {
+            return chaine.split('').reverse().join('');
+        }
+        
+        // Vérifie si le mot est un palindrome
+        if (mot === inverserChaine(mot)) {
+            console.log(mot + " est un palindrome.");
+        } else {
+            console.log(mot + " n'est pas un palindrome.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
