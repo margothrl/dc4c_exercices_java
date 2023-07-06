@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function filtrerNombresPairs(tableau) {
+          // Création d'un tableau vide pour stocker les nombres pairs
+          var tableauPairs = [];
+
+          // Parcours de chaque élément du tableau d'origine
+          for (var i = 0; i < tableau.length; i++) {
+            // Vérification si l'élément est pair en utilisant l'opérateur modulo %
+            if (tableau[i] % 2 === 0) {
+              // Si l'élément est pair, l'ajouter au tableauPairs
+              tableauPairs.push(tableau[i]);
+            }
+          }
+
+          // Retourner le tableau contenant uniquement les nombres pairs
+          return tableauPairs;
+        }
+
+        // Exemple d'utilisation de la fonction
+        var nombres = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var nombresPairs = filtrerNombresPairs(nombres);
+
+        console.log(nombresPairs); // Affiche [2, 4, 6, 8, 10]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
